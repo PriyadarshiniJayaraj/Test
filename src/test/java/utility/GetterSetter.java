@@ -19,10 +19,44 @@ public class GetterSetter {
 	private  static String Brand_Label_Type; 
 	private static String Brand_Name;
 	private static String Buy_Code;
-    
-	 
+    private static String HazardousGoods;
+    private static String HangerType;
+    private static String HangerCode;
+    private static String AgeGrading;
+    private static String Country_of_Origin;
+    private static String ColorVariation;
+    private static String ItemDescPerPacking;
+    private static String SizeRange;
+    private static String NotesInstruction;
+	private static String VendorStatus=null; 
+	private static String Status=null;
+	private static String VendorID=null;
 
  
+
+	public static String getVendorID() {
+		return VendorID;
+	}
+
+	public static void setVendorID(String vendorID) {
+		VendorID = vendorID;
+	}
+
+	public static String getStatus() {
+		return Status;
+	}
+
+	public static void setStatus(String status) {
+		Status = status;
+	}
+
+	public static String getVendorStatus() {
+		return VendorStatus;
+	}
+
+	public static void setVendorStatus(String vendorStatus) {
+		VendorStatus = vendorStatus;
+	}
 
 	public static String getItem_No() {
 		return Item_No;
@@ -135,5 +169,87 @@ public class GetterSetter {
 	public static void setBuy_Code(String buy_Code) {
 		Buy_Code = buy_Code;
 	}
+
+	public static String getLine_Type() {
+		return Line_Type;
+	}
+
+	public static void setLine_Type(String line_Type) {
+		Line_Type = line_Type;
+	}
+
+	public static String getHazardousGoods() {
+		return HazardousGoods;
+	}
+
+	public static void setHazardousGoods(String hazardousGoods) {
+		HazardousGoods = hazardousGoods;
+	}
+
+	public static String getHangerType() {
+		return HangerType;
+	}
+
+	public static void setHangerType(String hangerType) {
+		HangerType = hangerType;
+	}
+
+	public static String getHangerCode() {
+		return HangerCode;
+	}
+
+	public static void setHangerCode(String hangerCode) {
+		HangerCode = hangerCode;
+	}
+
+	public static String getAgeGrading() {
+		return AgeGrading;
+	}
+
+	public static void setAgeGrading(String ageGrading) {
+		AgeGrading = ageGrading;
+	}
+
+	public static String getCountry_of_Origin() {
+		return Country_of_Origin;
+	}
+
+	public static void setCountry_of_Origin(String country_of_Origin) {
+		Country_of_Origin = country_of_Origin;
+	}
+
+	public static String getColorVariation() {
+		return ColorVariation;
+	}
+
+	public static void setColorVariation(String colorVariation) {
+		ColorVariation = colorVariation;
+	}
+
+	public static String getItemDescPerPacking() {
+		return ItemDescPerPacking;
+	}
+
+	public static void setItemDescPerPacking(String itemDescPerPacking) {
+		ItemDescPerPacking = itemDescPerPacking;
+	}
+
+	public static String getSizeRange() {
+		return SizeRange;
+	}
+
+	public static void setSizeRange(String sizeRange) {
+		SizeRange = sizeRange;
+	}
+
+	public static String getNotesInstruction() {
+		return NotesInstruction;
+	}
+
+	public static void setNotesInstruction(String notesInstruction) {
+		NotesInstruction = notesInstruction;
+	}
+	
+	
 	
 }

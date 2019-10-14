@@ -1,17 +1,20 @@
 package manager;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
 import enums.*;
 public class WebDriverManager {
 	private WebDriver driver;
 	 private static DriverType driverType;
 	 private static EnvironmentType environmentType;
-	 
+	 public static String driverPath=System.getProperty("user.dir");
 	 private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 	 private static final String FIREFOX_DRIVER_PROPERTY="webdriver.gecko.driver";
+	 private static final String IE_DRIVER_PROPERTY="webdriver.ie.driver";
 	 
 	 public WebDriverManager() {
 	 driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
@@ -39,15 +42,22 @@ public class WebDriverManager {
 	 
 	 private WebDriver createLocalDriver() {
 	        switch (driverType) {     
-	       
 	        case FIREFOX : 
-	        System.setProperty(FIREFOX_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
-	      break;
+	     //   System.setProperty(FIREFOX_DRIVER_PROPERTY,driverPath+FileReaderManager.getInstance().getConfigReader().getDriverPath());
+	       System.setProperty(FIREFOX_DRIVER_PROPERTY, driverPath+"\\lib\\geckodriver.exe");
+	        	driver= new FirefoxDriver(); 
+	        break;
 	        case CHROME : 
-	         System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
+	        	  System.setProperty(CHROME_DRIVER_PROPERTY, driverPath+"\\lib\\chromedriver.exe");
+	     //    System.setProperty(CHROME_DRIVER_PROPERTY,driverPath+ FileReaderManager.getInstance().getConfigReader().getDriverPath());
 	         driver = new ChromeDriver();
 	     break;
-	        case INTERNETEXPLORER : driver = new InternetExplorerDriver();
+	     
+	        case INTERNETEXPLORER : 
+	        //	  System.setProperty(IE_DRIVER_PROPERTY,driverPath+ FileReaderManager.getInstance().getConfigReader().getDriverPath());
+	        	System.setProperty(IE_DRIVER_PROPERTY, driverPath+"\\lib\\IEDriverServer.exe");
+	        	driver = new InternetExplorerDriver();
+	      
 	     break;
 	        }
 	 

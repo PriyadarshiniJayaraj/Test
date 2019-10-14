@@ -14,7 +14,8 @@ import enums.*;
 	public class ConfigFileReader { 
 	 private Properties properties;
 	 private final String propertyFileName="Configuration.properties";
-	 private final String propertyFilePath= "C:\\Users\\pjayaraj\\DssAutomationWorkspace\\Test\\src\\test\\resources\\config\\Configuration.properties";
+	// private final String propertyFilePath= "C:\\Users\\pjayaraj\\DssAutomationWorkspace\\Test\\src\\test\\resources\\config\\Configuration.properties";
+	 private final String propertyFilePath=System.getProperty("user.dir")+"\\src\\test\\resources\\config\\Configuration.properties";
 	 InputStream inputStream;
 	 
 	 public ConfigFileReader(){

@@ -3,315 +3,147 @@
     "line": 1,
     "elements": [
       {
-        "line": 14,
-        "name": "Invite Vendor with Valid Input Data for HeaderTab,ColourTab",
+        "before": [
+          {
+            "result": {
+              "duration": 11322013887,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Create an Account",
         "description": "",
-        "id": "invite-vendor;invite-vendor-with-valid-input-data-for-headertab,colourtab;;2",
+        "id": "create-item;create-an-account",
+        "after": [
+          {
+            "result": {
+              "duration": 26464,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6210578846,
+              "duration": 113230282,
               "status": "passed"
             },
             "line": 4,
-            "name": "Login Dss+ Application with Valid User Details",
+            "name": "Launch the Application",
             "match": {
-              "location": "StepDefinitions.login_Dss_Application_with_Valid_User_Details()"
+              "location": "StepDefinitions.launch_the_Application()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 53798474046,
+              "duration": 151086406,
               "status": "passed"
             },
             "line": 5,
-            "name": "User is on Home Page Click on New Item Tab and Click Create New Item",
+            "name": "\"AliExpress\" Dashboard is Launched",
             "match": {
-              "location": "StepDefinitions.user_is_on_Home_Page_Click_on_New_Item_Tab_and_Click_Create_New_Item()"
+              "arguments": [
+                {
+                  "val": "AliExpress",
+                  "offset": 1
+                }
+              ],
+              "location": "StepDefinitions.dashboard_is_Launched(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 14178396306,
+              "duration": 6841449090,
               "status": "passed"
             },
             "line": 6,
-            "name": "Enter the Required Field Values for \"zzDummyAutoTestItem\" \"Test\" \"Test\" \"07/10/2019\" \"Generic\" \"Winter\" \"2019\" \"Test\" \"Apparel Consolidation\" \"EACH\" \"991 - APPAREL DUMMY DEPT\" \"Private\" \"ADVANCE\" \"Fashion Line\"in Header Tab and Click Save",
+            "name": "Change the Currency to \"USD\"",
             "match": {
               "arguments": [
                 {
-                  "val": "zzDummyAutoTestItem",
-                  "offset": 37
-                },
-                {
-                  "val": "Test",
-                  "offset": 59
-                },
-                {
-                  "val": "Test",
-                  "offset": 66
-                },
-                {
-                  "val": "07/10/2019",
-                  "offset": 73
-                },
-                {
-                  "val": "Generic",
-                  "offset": 86
-                },
-                {
-                  "val": "Winter",
-                  "offset": 96
-                },
-                {
-                  "val": "2019",
-                  "offset": 105
-                },
-                {
-                  "val": "Test",
-                  "offset": 112
-                },
-                {
-                  "val": "Apparel Consolidation",
-                  "offset": 119
-                },
-                {
-                  "val": "EACH",
-                  "offset": 143
-                },
-                {
-                  "val": "991 - APPAREL DUMMY DEPT",
-                  "offset": 150
-                },
-                {
-                  "val": "Private",
-                  "offset": 177
-                },
-                {
-                  "val": "ADVANCE",
-                  "offset": 187
-                },
-                {
-                  "val": "Fashion Line",
-                  "offset": 197
+                  "val": "USD",
+                  "offset": 24
                 }
               ],
-              "location": "StepDefinitions.enter_the_Required_Field_Values_for_in_Header_Tab_and_Click_Save(String,String,String,String,String,String,String,String,String,String,String,String,String,String)"
+              "location": "StepDefinitions.change_the_Currency_to_INR(String)"
             },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12,
-              13
-            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 20264674224,
+              "duration": 4907281038,
               "status": "passed"
             },
             "line": 7,
-            "name": "Enter the Required Field Values for Colour Tab",
+            "name": "Search for Product \"Laptop\" in SearchBar",
             "match": {
-              "location": "StepDefinitions.enter_the_Required_Field_Values_for_Colour_Tab()"
+              "arguments": [
+                {
+                  "val": "Laptop",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefinitions.search_for_Product_in_SearchBar(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 11638955304,
+              "duration": 2798959042,
               "status": "passed"
             },
             "line": 8,
-            "name": "Enter the Required Field Values for Requirement Tab",
+            "name": "Provide the Min Price as \"10000\" and Max Price as \"50000\"",
             "match": {
-              "location": "StepDefinitions.enter_the_Required_Field_Values_for_Requirement_Tab()"
+              "arguments": [
+                {
+                  "val": "10000",
+                  "offset": 26
+                },
+                {
+                  "val": "50000",
+                  "offset": 51
+                }
+              ],
+              "location": "StepDefinitions.provide_the_Min_Price_as_and_Max_Price_as(String,String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 6403853933,
+              "duration": 96675,
               "status": "passed"
             },
             "line": 9,
-            "name": "Enter the Required Field Values for Specification Tab",
-            "match": {
-              "location": "StepDefinitions.enter_the_Required_Field_Values_for_Specification_Tab()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 21503770058,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "The Values Should be Saved Successfully",
-            "match": {
-              "location": "StepDefinitions.the_Values_Should_be_Saved_Successfully()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Invite Vendor without  Mandatory Input Data for Department",
-        "description": "",
-        "id": "invite-vendor;invite-vendor-without--mandatory-input-data-for-department;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 6258535087,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "Login Dss+ Application with Valid User Details",
-            "match": {
-              "location": "StepDefinitions.login_Dss_Application_with_Valid_User_Details()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 20288588074,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User is on Home Page Click on New Item Tab and Click Create New Item",
-            "match": {
-              "location": "StepDefinitions.user_is_on_Home_Page_Click_on_New_Item_Tab_and_Click_Create_New_Item()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 13780073915,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "Enter the Required Field Values for \"zzDummyAutoTestItem\" \"Test\" \"Test\" \"30/09/2019\" \"Generic\" \"Winter\" \"2019\" \"Test\" \"Apparel Consolidation\" \"EACH\" \"\" \"Private\" \"ADVANCE\" \"Fashion Line\"in Header Tab and Click Save",
+            "name": "Validate that  Categories List \"Laptop\" and Shows Count of Product",
             "match": {
               "arguments": [
                 {
-                  "val": "zzDummyAutoTestItem",
-                  "offset": 37
-                },
-                {
-                  "val": "Test",
-                  "offset": 59
-                },
-                {
-                  "val": "Test",
-                  "offset": 66
-                },
-                {
-                  "val": "30/09/2019",
-                  "offset": 73
-                },
-                {
-                  "val": "Generic",
-                  "offset": 86
-                },
-                {
-                  "val": "Winter",
-                  "offset": 96
-                },
-                {
-                  "val": "2019",
-                  "offset": 105
-                },
-                {
-                  "val": "Test",
-                  "offset": 112
-                },
-                {
-                  "val": "Apparel Consolidation",
-                  "offset": 119
-                },
-                {
-                  "val": "EACH",
-                  "offset": 143
-                },
-                {
-                  "val": "",
-                  "offset": 150
-                },
-                {
-                  "val": "Private",
-                  "offset": 153
-                },
-                {
-                  "val": "ADVANCE",
-                  "offset": 163
-                },
-                {
-                  "val": "Fashion Line",
-                  "offset": 173
+                  "val": "Laptop",
+                  "offset": 32
                 }
               ],
-              "location": "StepDefinitions.enter_the_Required_Field_Values_for_in_Header_Tab_and_Click_Save(String,String,String,String,String,String,String,String,String,String,String,String,String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12,
-              13
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 10588281361,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "The Warning Message Should be displayed Successfully as \"Product Category: Mandatory field is missing.\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Product Category: Mandatory field is missing.",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefinitions.the_Warning_Message_Should_be_displayed_Successfully_as(String)"
+              "location": "StepDefinitions.validate_that_Categories_List_and_Shows_Count_of_Product(String)"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Invite Vendor",
+    "name": "Create Item",
     "description": "",
-    "id": "invite-vendor",
+    "id": "create-item",
     "keyword": "Feature",
     "uri": "features/Item.feature"
   }

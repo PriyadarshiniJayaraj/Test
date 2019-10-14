@@ -18,8 +18,9 @@ import cucumber.api.junit.Cucumber;
 
 		features = "classpath:features",
 		glue = {"classpath:stepDefinitions"},
+				//tags = {"@DeactivateandActivateVendor"},
 		plugin = { 
-				
+				 
 				"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"
 				,"html:target/cucumber-reports/cucumber-pretty",
 				"json:target/cucumber-reports/Cucumber.json",

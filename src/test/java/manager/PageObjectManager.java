@@ -5,7 +5,7 @@ import pageFactory.*;
 public class PageObjectManager {
 	private WebDriver driver;
 	 
-	 private LoginPage loginPage;
+	 private HomePage loginPage;
 	 private HomePage homePage;
 	 
 	 public PageObjectManager(WebDriver driver) {
@@ -19,9 +19,9 @@ public class PageObjectManager {
 		 
 		 }
 	 
-	 public LoginPage getLoginPage() {
+	 public HomePage getLoginPage() {
 		 
-		 return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
+		 return (loginPage == null) ? loginPage = new HomePage(driver) : loginPage;
 		 
 		 }
 }

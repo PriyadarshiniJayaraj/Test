@@ -30,7 +30,7 @@ import com.google.common.base.Function;
 
 public class ActionClass {
 	public static  WebDriver driver;
-	
+	public static String ScreenShotpath=System.getProperty("user.dir");
 	public ActionClass(WebDriver driver){
 		//this.driver=driver;
 	}
@@ -46,6 +46,10 @@ public class ActionClass {
             //updateStep("Error in Executing Javascript", "Fail - Exception: "+ "\n\t\t" + e.getClass().getSimpleName());
         }
     }
+	
+	public static void currentURL(){
+		String URL=driver.getCurrentUrl();
+	}
 	public static void waitForElement(WebElement element) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -74,7 +78,7 @@ public class ActionClass {
 	public static void takeScreenshotMethod()
 			throws Exception {
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(f, new File("C:\\Users\\pjayaraj\\DssAutomationWorkspace\\Test\\Screenshot"));
+		FileUtils.copyFile(f, new File(ScreenShotpath+"\\Screenshot"));
 	}
 	
 	public static void sendkey(WebElement element,String Input) {
@@ -279,7 +283,14 @@ public class ActionClass {
 				.moveToElement(toWebElement).click(toWebElement).build();
 		dropDown.perform();
 	}
-
+   
+	
+	public static void clickandhold(WebElement element){
+		Actions builder = new Actions(driver);
+		Action clickandhold=builder.clickAndHold(element).build();
+		clickandhold.perform();
+	}
+	
 	public static void hoverWebelement(WebElement HovertoWebElement)
 			throws InterruptedException {
 		

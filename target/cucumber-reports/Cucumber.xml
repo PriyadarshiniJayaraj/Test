@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="184.914181">
-<testcase classname="Invite Vendor" name="Invite Vendor with Valid Input Data for HeaderTab,ColourTab" time="133.998703">
-<system-out><![CDATA[Given Login Dss+ Application with Valid User Details........................passed
-When User is on Home Page Click on New Item Tab and Click Create New Item...passed
-And Enter the Required Field Values for "zzDummyAutoTestItem" "Test" "Test" "07/10/2019" "Generic" "Winter" "2019" "Test" "Apparel Consolidation" "EACH" "991 - APPAREL DUMMY DEPT" "Private" "ADVANCE" "Fashion Line"in Header Tab and Click Save.passed
-And Enter the Required Field Values for Colour Tab..........................passed
-And Enter the Required Field Values for Requirement Tab.....................passed
-And Enter the Required Field Values for Specification Tab...................passed
-Then The Values Should be Saved Successfully................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Invite Vendor" name="Invite Vendor without  Mandatory Input Data for Department" time="50.915478">
-<system-out><![CDATA[Given Login Dss+ Application with Valid User Details........................passed
-When User is on Home Page Click on New Item Tab and Click Create New Item...passed
-And Enter the Required Field Values for "zzDummyAutoTestItem" "Test" "Test" "30/09/2019" "Generic" "Winter" "2019" "Test" "Apparel Consolidation" "EACH" "" "Private" "ADVANCE" "Fashion Line"in Header Tab and Click Save.passed
-Then The Warning Message Should be displayed Successfully as "Product Category: Mandatory field is missing.".passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="26.134143">
+<testcase classname="Create Item" name="Create an Account" time="26.134143">
+<system-out><![CDATA[Given Launch the Application................................................passed
+When "AliExpress" Dashboard is Launched.....................................passed
+And Change the Currency to "USD"............................................passed
+And Search for Product "Laptop" in SearchBar................................passed
+And Provide the Min Price as "10000" and Max Price as "50000"...............passed
+Then Validate that  Categories List "Laptop" and Shows Count of Product.....passed
 ]]></system-out>
 </testcase>
 </testsuite>
